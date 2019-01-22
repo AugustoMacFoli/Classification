@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %}
+    | Random Forest
+{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Random Forest</li>
+        </ol>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Random Forest</h1>
+        <p class="lead">Random Forest is a supervised learning algorithm. It creates a forest and makes it random. The <i>forest</i> it builds, is an ensemble of Decision Trees, most of the time trained with the <i>bagging</i> method. The general idea of the bagging method is that a combination of learning models increases the overall result.</p>
+        <hr class="my-4">
+        <p>Random Forest is a flexible, easy to use machine learning algorithm that produces, even without hyper-parameter tuning, a great result most of the time. It is also one of the most used algorithms, because it’s simplicity and the fact that it can be used for both classification and regression tasks.</p>
+        <p>This example will try to predict if a client will or will not buy a product based on the client's age and estimated income.</p>
+        <center>
+            <a style="margin-top: 20px;" href="{% url 'random_forest_play' %}" class="btn btn-primary btn-lg loading">Play</a>
+        </center>
+    </div>
+{% endblock %}

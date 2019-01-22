@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %}
+    | Kernel SVM
+{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Kernel SVM</li>
+        </ol>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Kernel SVM</h1>
+        <p class="lead">In case of non-linearly separable data, the simple SVM algorithm cannot be used. Rather, a modified version of SVM, called Kernel SVM, is used.</p>
+        <hr class="my-4">
+        <p>The kernel SVM projects the non-linearly separable data lower dimensions to linearly separable data in higher dimensions in such a way that data points belonging to different classes are allocated to different dimensions.</p>
+        <p>This example will try to predict if a client will or will not buy a product based on the client's age and estimated income.</p>
+        <center>
+            <a style="margin-top: 20px;" href="{% url 'kernel_svm_play' %}" class="btn btn-primary btn-lg loading">Play</a>
+        </center>
+    </div>
+{% endblock %}

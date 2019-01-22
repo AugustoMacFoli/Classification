@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %}
+    | Decision Tree
+{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Decision Tree</li>
+        </ol>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Decision Tree</h1>
+        <p class="lead">The Decision Tree Classifier repetitively divides the working area(plot) into sub part by identifying lines. Repetitively because there may be two or more distant regions of same class divided by other.</p>
+        <hr class="my-4">
+        <p>A decision tree is a flow-chart-like structure, where each internal (non-leaf) node denotes a test on an attribute, each branch represents the outcome of a test, and each leaf (or terminal) node holds a class label. The topmost node in a tree is the root node.</p>
+        <p>This example will try to predict if a client will or will not buy a product based on the client's age and estimated income.</p>
+        <center>
+            <a style="margin-top: 20px;" href="{% url 'decision_tree_play' %}" class="btn btn-primary btn-lg loading">Play</a>
+        </center>
+    </div>
+{% endblock %}

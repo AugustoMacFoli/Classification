@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %}
+    | K-Nearest Neighbors (KNN)
+{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">K-Nearest Neighbors (KNN)</li>
+        </ol>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">K-Nearest Neighbors (KNN)</h1>
+        <p class="lead">KNN Algorithm is based on feature similarity: How closely out-of-sample features resemble our training set determines how we classify a given data point.</p>
+        <hr class="my-4">
+        <p>KNN could and probably should be one of the first choices for a classification study when there is little or no prior knowledge about the distribution data. KNN can be used for both classification and regression predictive problems. However, it is more widely used in classification problems. It usually requires more computing power than other algorithms.</p>
+        <p>This example will try to predict if a client will or will not buy a product based on the client's age and estimated income.</p>
+        <center>
+            <a style="margin-top: 20px;" href="{% url 'knn_play' %}" class="btn btn-primary btn-lg loading">Play</a>
+        </center>
+    </div>
+{% endblock %}

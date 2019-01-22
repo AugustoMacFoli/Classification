@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %}
+    | Logistic Regression
+{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Logistic Regression</li>
+        </ol>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Logistic Regression</h1>
+        <p class="lead">Logistic regression is a statistical machine learning algorithm that classifies the data by considering outcome variables on extreme ends and makes a logarithmic line that distinguishes between them.</p>
+        <hr class="my-4">
+        <p>Logistic regression is a brother of linear regression but unlike its name, logistic regression is a classification algorithm.</p>
+        <p>This example will try to predict if a client will or will not buy a product based on the client's age and estimated income.</p>
+        <center>
+            <a style="margin-top: 20px;" href="{% url 'logistic_regression_play' %}" class="btn btn-primary btn-lg loading">Play</a>
+        </center>
+    </div>
+{% endblock %}

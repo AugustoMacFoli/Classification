@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %}
+    | Support Vector Machine (SVM)
+{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Support Vector Machine (SVM)</li>
+        </ol>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Support Vector Machine (SVM)</h1>
+        <p class="lead">In this algorithm, each data item is plotted as a point in n-dimensional space (where n is number of features in the dataset) with the value of each feature being the value of a particular coordinate. Then, it performs classification by finding the hyper-plane that best differentiates the two classes.</p>
+        <hr class="my-4">
+        <p>Support Vectors are simply the co-ordinates of individual observation. Support Vector Machine is a frontier which best segregates the two classes (hyper-plane/line).</p>
+        <p>This example will try to predict if a client will or will not buy a product based on the client's age and estimated income.</p>
+        <center>
+            <a style="margin-top: 20px;" href="{% url 'svm_play' %}" class="btn btn-primary btn-lg loading">Play</a>
+        </center>
+    </div>
+{% endblock %}

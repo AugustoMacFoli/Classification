@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %}
+    | Naive Bayes
+{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Naive Bayes</li>
+        </ol>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Naive Bayes</h1>
+        <p class="lead">Naive Bayes classifiers are a family of simple <i>probabilistic classifiers</i> based on applying Bayes' theorem with strong (naive) independence assumptions between the features.</p>
+        <hr class="my-4">
+        <p>An advantage of naive Bayes is that it only requires a small number of training data to estimate the parameters necessary for classification.</p>
+        <p>This example will try to predict if a client will or will not buy a product based on the client's age and estimated income.</p>
+        <center>
+            <a style="margin-top: 20px;" href="{% url 'naive_bayes_play' %}" class="btn btn-primary btn-lg loading">Play</a>
+        </center>
+    </div>
+{% endblock %}
